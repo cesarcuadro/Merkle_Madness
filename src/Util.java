@@ -70,7 +70,7 @@ public class Util {
 
     public static void sleep(int iSeconds) {
         try {
-            Util.sleep(iSeconds * 1000);
+            Thread.sleep(iSeconds * 1000);
         } catch(Exception e) {
         }
     }

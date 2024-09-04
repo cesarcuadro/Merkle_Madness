@@ -7,11 +7,11 @@ public class MerkleManager {
     public static int strikes = 0;
 
     public void manage() {
-        Scanner scanner = new Scanner(System.in);
+        Util oUtil = new Util();
         System.out.print("What do you expect to output?: ");
-        expectedUserOutput = scanner.nextLine();
+        expectedUserOutput = oUtil.promptUser("What do you expect to output?: ");
 
-        //Util oUtil = new Util();
+
         MerkleThread oMerkleThread = new MerkleThread();
         RogueThread oRogueThread = new RogueThread();
         MonitorThread oMonitorThread = new MonitorThread();
@@ -26,7 +26,7 @@ public class MerkleManager {
 
         while (true) {
             System.out.print("Input your guess: ");
-            userInput = scanner.next();
+            userInput = oUtil.promptUser("Input your guess: ");
         }
     }
 
