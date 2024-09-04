@@ -1,5 +1,5 @@
 public class MonitorThread implements Runnable {
-    public run() {
+    public void run() {
         Util oUtil = new Util();
         while (true) {
             if (MerkleManager.merkleRoot != null) {
