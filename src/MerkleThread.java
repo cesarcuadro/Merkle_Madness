@@ -10,7 +10,7 @@ public class MerkleThread implements Runnable {
         MerkleManager objMerkleManager = new MerkleManager();
 
         while (true) {
-            objUtil.sleepRandomTime();
+            objUtil.sleepRandomTime("MerkleThread");
             String sNewWord = MerkleManager.grabWord();
             if (sNewWord != null) {
                 System.out.println("Merkle grabbed a new word");

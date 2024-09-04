@@ -3,7 +3,7 @@ public class MonitorThread implements Runnable {
         Util oUtil = new Util();
         while (true) {
             if (MerkleManager.merkleRoot != null) {
-                if (MerkleManager.merkleRoot = MerkleManager.userInput;) {
+                if (MerkleManager.merkleRoot.equals(MerkleManager.expectedUserOutput)) {
                     System.out.println("You win " + MerkleManager.merkleRoot);
                     break;
                 } else {
