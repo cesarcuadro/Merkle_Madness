@@ -1,5 +1,7 @@
+import javax.swing.*;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
+import java.security.SecureRandom;
 import java.util.ArrayList;
 
 public class Util {
@@ -49,6 +51,27 @@ public class Util {
 
             System.out.println("Error generating hash: " + ex.getMessage());
             return null;
+        }
+    }
+
+    public String promptUser(String sQuestion) {
+        JOptionPane oQuestion = new JOptionPane();
+        String sAnswer = oQuestion.showInputDialog(sQuestion);
+        return sAnswer;
+    }
+
+    public void sleepRandomTime(String sThreadName) {
+        SecureRandom oSecureRandom = new SecureRandom();
+        int iNum = oSecureRandom.nextInt(6) + 3;
+
+        System.out.println(sThreadName + "is going to sleep for " + iNum + " seconds");
+        Util.sleep(iNum);
+    }
+
+    public static void sleep(int iSeconds) {
+        try {
+            Util.sleep(iSeconds * 1000);
+        } catch(Exception e) {
         }
     }
 }
